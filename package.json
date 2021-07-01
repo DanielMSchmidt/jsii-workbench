@@ -1,0 +1,50 @@
+{
+  "name": "jsii-workbench",
+  "version": "1.0.0",
+  "description": "When working with JSII you sometimes just want to drop in an interface and inspect all generated code in differnet languages.",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "tsc ./src/index.ts",
+    "build": "jsii",
+    "postbuild": "jsii-pacmak"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Daniel Schmidt",
+    "email": "danielmschmidt92@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/DanielMSchmidt/jsii-workbench.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jsii": "^1.30.0",
+    "jsii-pacmak": "^1.30.0",
+    "typescript": "^4.3.5"
+  },
+  "stability": "experimental",
+  "types": "src/index.d.ts",
+  "jsii": {
+    "outdir": "generated",
+    "versionFormat": "full",
+    "targets": {
+      "java": {
+        "package": "workbench.jsii.danielmschmidt.com",
+        "maven": {
+          "groupId": "workbench.jsii.danielmschmidt.com",
+          "artifactId": "core"
+        }
+      },
+      "python": {
+        "distName": "jsii-workbench.core",
+        "module": "jsii_workbench.core"
+      },
+      "dotnet": {
+        "namespace": "jsii.workbench",
+        "packageId": "jsii.workbench",
+        "iconUrl": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "versionSuffix": "-devpreview"
+      }
+    }
+  }
+}
