@@ -4,7 +4,7 @@ When working with JSII you sometimes just want to drop in an interface and inspe
 
 ## Usage
 
-1. Run `npm install`
+1. Clone and run `npm install`
 2. Open `./src/index.ts` and add your library code
 3. Open `./example.ts` and add your user-facing code
 4. Run `npm build` 
