@@ -7,7 +7,7 @@ const folder = path.resolve(__dirname, "docs");
 fs.mkdirSync(folder);
 
 const ts = new reflect.TypeSystem();
-ts.loadFile(path.resolve(__dirname, ".jsii")).then(() => {
+ts.load(path.resolve(__dirname)).then(() => {
   function createDocs(language) {
     const docs = new Documentation({
       assembly: ts.findAssembly("jsii-workbench"),
