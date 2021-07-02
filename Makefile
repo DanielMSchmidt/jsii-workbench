@@ -1,3 +1,4 @@
+MAKEFLAGS += -j$(NPROCS)
 
 all: generated/python generated/java generated/csharp generated/go docs EXAMPLE.md
 
