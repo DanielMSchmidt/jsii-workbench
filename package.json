@@ -4,9 +4,9 @@
   "description": "When working with JSII you sometimes just want to drop in an interface and inspect all generated code in differnet languages.",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf ./generated && tsc ./src/index.ts",
+    "prebuild": "rm -rf ./generated && rm -rf ./dist && tsc ./lib/index.ts",
     "build": "jsii",
-    "postbuild": "node ./index.js"
+    "postbuild": "make all"
   },
   "keywords": [],
   "author": {
@@ -23,7 +23,7 @@
     "typescript": "4.3.5"
   },
   "stability": "experimental",
-  "types": "src/index.d.ts",
+  "types": "lib/index.d.ts",
   "jsii": {
     "outdir": "generated",
     "versionFormat": "full",
