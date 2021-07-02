@@ -4,9 +4,8 @@
   "description": "When working with JSII you sometimes just want to drop in an interface and inspect all generated code in differnet languages.",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && tsc ./lib/index.ts",
-    "build": "jsii",
-    "postbuild": "make all"
+    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && rm .jsii && tsc ./lib/index.ts",
+    "build": "make all"
   },
   "keywords": [],
   "author": {

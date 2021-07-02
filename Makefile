@@ -1,7 +1,10 @@
 
-all: generated/python generated/java generated/csharp generated/go
+all: generated/python generated/java generated/csharp generated/go docs EXAMPLE.md
 
-generated:
+.jsii: 
+	jsii
+
+generated: .jsii
 	mkdir -p generated
 
 generated/python: generated
@@ -16,6 +19,8 @@ generated/csharp: generated
 generated/go: generated
 	npx jsii-srcmak ./lib --golang-outdir=$@ --golang-module="github.com/danielmschmidt/jsii-workbench" --golang-package="workbench"
 
-docs: 
+docs: .jsii
 	node ./generate-docs.js
 
+EXAMPLE.md: .jsii
+	node ./generate-example.js

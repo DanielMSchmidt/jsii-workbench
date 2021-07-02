@@ -6,3 +6,5 @@ src/index.js
 generated
 .jsii
 docs
+EXAMPLE.md
+.jsii.tabl.json
