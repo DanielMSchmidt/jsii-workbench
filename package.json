@@ -4,7 +4,7 @@
   "description": "When working with JSII you sometimes just want to drop in an interface and inspect all generated code in differnet languages.",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf ./generated && rm -rf ./dist && tsc ./lib/index.ts",
+    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && tsc ./lib/index.ts",
     "build": "jsii",
     "postbuild": "make all"
   },
@@ -19,6 +19,8 @@
   "license": "MIT",
   "devDependencies": {
     "jsii": "1.29.0",
+    "jsii-docgen": "2.0.0",
+    "jsii-reflect": "1.30.0",
     "jsii-srcmak": "0.1.297",
     "typescript": "4.3.5"
   },

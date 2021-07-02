@@ -16,3 +16,6 @@ generated/csharp: generated
 generated/go: generated
 	npx jsii-srcmak ./lib --golang-outdir=$@ --golang-module="github.com/danielmschmidt/jsii-workbench" --golang-package="workbench"
 
+docs: 
+	node ./generate-docs.js
+
