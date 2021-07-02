@@ -12,3 +12,5 @@ example.ts
 lib/index.ts
 *.js
 *.d.ts
+lib/index.js
+lib/index.d.ts
