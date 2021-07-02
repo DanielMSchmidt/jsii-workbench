@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "cp example.ts.sample example.ts && cp lib/index.ts.sample lib/index.ts",
-    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && rm .jsii && tsc ./lib/index.ts",
+    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && rm -f .jsii && tsc ./lib/index.ts",
     "build": "make all"
   },
   "keywords": [],

@@ -10,3 +10,5 @@ EXAMPLE.md
 .jsii.tabl.json
 example.ts
 lib/index.ts
+*.js
+*.d.ts
