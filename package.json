@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "cp example.ts.sample example.ts && cp lib/index.ts.sample lib/index.ts",
-    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && rm -f .jsii && tsc ./lib/index.ts",
+    "prebuild": "rm -rf ./generated && rm -rf ./dist && rm -rf ./docs && rm -f .jsii",
     "build": "make all"
   },
   "keywords": [],
@@ -18,11 +18,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "jsii": "1.29.0",
-    "jsii-docgen": "2.0.0",
-    "jsii-reflect": "1.30.0",
-    "jsii-srcmak": "0.1.297",
-    "typescript": "4.3.5"
+    "jsii": "1.44.1",
+    "jsii-docgen": "4.0.0",
+    "jsii-reflect": "1.44.1",
+    "jsii-srcmak": "0.1.400",
+    "typescript": "3.9.7"
   },
   "stability": "experimental",
   "types": "lib/index.d.ts",
