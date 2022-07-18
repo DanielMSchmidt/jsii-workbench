@@ -9,6 +9,7 @@ const LANGUAGES = [
   rosetta.PythonVisitor,
   rosetta.JavaVisitor,
   rosetta.CSharpVisitor,
+  rosetta.GoVisitor,
 ];
 
 const translations = LANGUAGES.map((Visitor) => {
@@ -22,8 +23,9 @@ const translations = LANGUAGES.map((Visitor) => {
   return translation;
 });
 
-fs.writeFileSync(path.resolve(__dirname, "EXAMPLE.md"), 
-`# Example
+fs.writeFileSync(
+  path.resolve(__dirname, "EXAMPLE.md"),
+  `# Example
 
 __Generated from ./example.ts__
 
@@ -50,4 +52,41 @@ ${translations[1]}
 \`\`\`csharp
 ${translations[2]}
 \`\`\`
-`)
+
+
+## Go
+
+\`\`\`go
+${translations[2]}
+\`\`\`
+
+
+## Codeblock
+
+\`\`\`mdx
+<CodeTabs>
+
+\`\`\`ts
+${fileContent}
+\`\`\`
+
+\`\`\`python
+${translations[0]}
+\`\`\`
+
+\`\`\`java
+${translations[1]}
+\`\`\`
+
+\`\`\`csharp
+${translations[2]}
+\`\`\`
+
+\`\`\`go
+${translations[3]}
+\`\`\`
+
+</CodeTabs>
+\`\`\`
+`
+);

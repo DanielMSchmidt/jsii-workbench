@@ -1,6 +1,6 @@
 MAKEFLAGS += -j$(NPROCS)
 
-all: generated/python generated/java generated/csharp generated/go docs/python.md docs/java.md docs/csharp.md docs/typescript.md EXAMPLE.md
+all: generated/python generated/java generated/csharp generated/go docs/python.md docs/java.md docs/csharp.md docs/typescript.md docs/go.md EXAMPLE.md
 
 .jsii: 
 	npx jsii
@@ -35,6 +35,8 @@ docs/csharp.md: docs
 docs/typescript.md: docs
 	npx jsii-docgen -l typescript -o=$@
 
+docs/go.md: docs
+	npx jsii-docgen -l go -o=$@
 
 EXAMPLE.md: .jsii
 	node ./generate-example.js
